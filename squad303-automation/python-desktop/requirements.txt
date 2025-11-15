@@ -1,0 +1,8 @@
+requests==2.31.0
+pysocks==1.7.1
+Flask==3.0.0
+python-dotenv==1.0.0
+click==8.1.7
+Colorama==0.4.6
+urlparse-rfc3986==1.4.1
+tor-python==1.0.0
