@@ -1,0 +1,32 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Release version'
+        required: true
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Create Release Tag
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: v${{ github.event.inputs.version }}
+        release_name: Release v${{ github.event.inputs.version }}
+        body: |
+          CyberWar Tools UA v${{ github.event.inputs.version }}
+          - Squad303 automation engine
+          - OSINT workflow templates
+          - Mobile LLM deployment
+        draft: false
+        prerelease: false
+    
+    - name: Update version file
+      run: echo ${{ github.event.inputs.version }} > VERSION
