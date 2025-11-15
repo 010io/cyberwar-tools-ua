@@ -1,0 +1,9 @@
+{
+  "name": "com.cyberwar.squad303.host",
+  "description": "Native messaging host for Squad303 Chrome Extension",
+  "path": "/usr/local/bin/squad303-native-host",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://EXTENSION_ID_PLACEHOLDER/"
+  ]
+}
