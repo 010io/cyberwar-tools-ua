@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Squad303 Control Panel</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚡ Squad303</h1>
+            <span class="version">v1.0.0</span>
+        </header>
+        
+        <div class="status-panel">
+            <div class="status-item">
+                <label>Connection Status:</label>
+                <span id="connection-status" class="status-badge offline">Offline</span>
+            </div>
+            <div class="status-item">
+                <label>Backend:</label>
+                <span id="backend-status" class="status-text">Waiting...</span>
+            </div>
+        </div>
+        
+        <div class="control-panel">
+            <div class="control-group">
+                <label for="operator-id">Operator ID:</label>
+                <input type="text" id="operator-id" placeholder="Enter operator ID" maxlength="32">
+            </div>
+            
+            <div class="control-group">
+                <label for="message-text">Message:</label>
+                <textarea id="message-text" placeholder="Enter message to send" rows="4"></textarea>
+            </div>
+            
+            <div class="control-group">
+                <label for="target-platform">Platform:</label>
+                <select id="target-platform">
+                    <option value="discord">Discord</option>
+                    <option value="slack">Slack</option>
+                    <option value="telegram">Telegram</option>
+                </select>
+            </div>
+            
+            <button id="send-btn" class="btn-primary">Send Message</button>
+            <button id="queue-btn" class="btn-secondary">Queue Message</button>
+        </div>
+        
+        <div class="queue-panel">
+            <h3>Message Queue</h3>
+            <div id="queue-list" class="queue-items">
+                <p class="placeholder">No queued messages</p>
+            </div>
+            <button id="send-all-btn" class="btn-action" disabled>Send All (0)</button>
+            <button id="clear-queue-btn" class="btn-action" disabled>Clear Queue</button>
+        </div>
+        
+        <div class="log-panel">
+            <h3>Activity Log</h3>
+            <div id="activity-log" class="log-entries">
+                <p class="log-entry">Initializing Squad303...</p>
+            </div>
+        </div>
+        
+        <footer>
+            <a href="#" id="settings-link">⚙️ Settings</a>
+            <a href="#" id="help-link">❓ Help</a>
+        </footer>
+    </div>
+    
+    <script src="popup.js"></script>
+</body>
+</html>
