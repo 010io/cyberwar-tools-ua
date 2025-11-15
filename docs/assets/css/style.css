@@ -1,0 +1,265 @@
+/* CyberWarTools UA - Main Stylesheet
+ * Professional dark theme with Ukrainian blue accents
+ * Responsive design for mobile and desktop
+ * Last Updated: 2024
+ */
+
+:root {
+  --primary-color: #0057B7;
+  --secondary-color: #FFD700;
+  --dark-bg: #0a0e27;
+  --darker-bg: #050812;
+  --text-primary: #e0e0e0;
+  --text-secondary: #a0a0a0;
+  --border-color: #1a1f3a;
+  --accent-danger: #ff4444;
+  --accent-success: #44ff44;
+  --accent-warning: #ffaa00;
+  --shadow: 0 10px 40px rgba(0, 87, 183, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+  color: var(--text-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+header {
+  background: linear-gradient(90deg, var(--dark-bg) 0%, rgba(0, 87, 183, 0.1) 100%);
+  border-bottom: 2px solid var(--primary-color);
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: rgba(26, 31, 58, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.button {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: var(--dark-bg);
+  border: none;
+  padding: 0.8rem 2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 50px rgba(0, 87, 183, 0.4);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button.secondary {
+  background: linear-gradient(135deg, var(--dark-bg), var(--dark-bg));
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(10, 14, 39, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px rgba(0, 87, 183, 0.3);
+  background: rgba(10, 14, 39, 0.95);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  border-left: 4px solid;
+}
+
+.alert.success {
+  background: rgba(68, 255, 68, 0.1);
+  border-left-color: var(--accent-success);
+  color: var(--accent-success);
+}
+
+.alert.danger {
+  background: rgba(255, 68, 68, 0.1);
+  border-left-color: var(--accent-danger);
+  color: var(--accent-danger);
+}
+
+.alert.warning {
+  background: rgba(255, 170, 0, 0.1);
+  border-left-color: var(--accent-warning);
+  color: var(--accent-warning);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: rgba(26, 31, 58, 0.7);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 10px 30px rgba(0, 87, 183, 0.2);
+}
+
+code {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  color: var(--accent-success);
+  font-size: 0.9em;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 1rem;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+pre code {
+  background: transparent;
+  color: var(--accent-success);
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+tr:nth-child(even) {
+  background: rgba(0, 87, 183, 0.05);
+}
+
+td, th {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: left;
+}
+
+th {
+  background: rgba(0, 87, 183, 0.1);
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border-color);
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 1.8rem; }
+  h2 { font-size: 1.4rem; }
+  h3 { font-size: 1.2rem; }
+  .container { padding: 1rem; }
+  .section { padding: 1rem; }
+  .grid { grid-template-columns: 1fr; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
