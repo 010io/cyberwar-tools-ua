@@ -1,0 +1,38 @@
+docs/index.html  <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CyberWarTools UA - Squad303 Automation Browser Edition">
+  <meta name="theme-color" content="#0057B7">
+  <title>CyberWarTools UA - Squad303</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" href="assets/img/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/img/icon-512.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header><h1>🇺🇦 CyberWarTools UA</h1><p>Squad303 Automation - Browser Edition</p></header>
+  <main class="container">
+    <section class="control-panel">
+      <h2>Control Panel</h2>
+      <div class="status-box"><span id="status-icon"></span> <span id="status-text">Ready</span></div>
+      <div class="button-group">
+        <button id="start-btn" class="btn btn-success">Start Automation</button>
+        <button id="stop-btn" class="btn btn-danger" disabled>Stop</button>
+        <button id="send-once" class="btn btn-warning" disabled>Send Once</button>
+      </div>
+      <div class="stats"><p>Sent today: <strong id="sent-count">0</strong></p></div>
+    </section>
+    <section class="log-panel"><h2>Log Console</h2><div id="log-console" class="log"></div></section>
+  </main>
+  <footer><p>&copy; 2025 @010io | <a href="https://github.com/010io/cyberwar-tools-ua">GitHub</a></p></footer>
+  <script src="assets/js/squad303-core.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceworker.js').catch(err => console.error('SW failed:', err));
+    }
+  </script>
+</body>
+</html>
